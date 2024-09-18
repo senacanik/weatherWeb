@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{font-family: sans-serif;color: #000;background: linear-gradient(to bottom right, #c5dbfcdb, #d6b4ced6);display: flex;justify-content: center;align-items: center;height: 100vh;}
+
+.information-exchange {position: relative;}
+.searchBtn {position: absolute;height: 35px;width: 40px;right: 15px;top: 50%;transform: translate(0 , -50%);display: flex;justify-content: center;align-items: center;border: 0;background: #ffffff;}
+.searchBtn svg{transform: scale(0.6);}
+.app {display: flex;justify-content: center;align-items: center;flex-direction: column;width: 100%;border-radius: 20px;}
+.app-card {width: 100%;background: #fff;border-radius: 10px;}
+.searchBoxClass {width: 100%;font-size: 15px;height: 41px;text-align: left;border: 1px solid #919394;padding: 0 0 0 20px;border-radius: 50px;}
+.content {width: 100%;display: flex;justify-content: center;align-items: center;flex-direction: column;gap: 0px;padding: 30px 0 0 0;}
+.city {font-size: 25px;color: #2493CB;}
+.temp {font-size: 40px;}
+.desc {font-size: 25px; color: #707070;}
+.minmax {font-size: 25px;}
+.card-footer {height: 60px;}
+.app-header {font-size: 25px;color: #898888dd;width: 100%;border-radius: 10px 10px 0px 0px;padding: 10px 20px;border-bottom: 1px solid #eeee;margin-bottom: 20px;display: flex;justify-content: flex-start;align-items: end;gap: 10px;}
+.app-header img{width: 50px;height: 50px;background-size: contain;}
+.app-body {padding: 0 20px;}
+.location-icon {padding-left: 15px;}
+
+@media(min-width:768px){
+    .app-header{font-size: 35px;}
+    .app-header img{width: 80px;height: 80px;}
+    .temp{font-size: 80px;}
+    .searchBoxClass{height: 50px;font-size: 18px;}
+}

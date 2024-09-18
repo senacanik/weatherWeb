@@ -5,44 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/c/style.css">
 </head>
   <body>
    <div class="container">
     <div class="row">
         <div class="col-12">
             <div class="app">
-                <div class="card border-secondary mb-3 app-card">
-                    <div class="card-header">Hava Durumu</div>
-                    <div class="card-body text-secondary">
-                        <div class="card-group d-flex justify-content-around align-items-center flex-column gap-3">
-                            <input type="text" class="searchBoxClass rounded-3" placeholder="Şehir Giriniz">
-                            <button type="button" class="btn btn-outline-secondary searchBtn">Hava Durumu Göster</button>
+                <div class="mb-3 app-card">
+                    
+                    <div class="app-header">
+                        <img src="dist/i/weather.png" alt="weather">
+                        Hava Durumu
+                    </div>
+                    <div class="app-body text-secondary">
+                        <div class="information-exchange mb-3">
+                            <input type="text" class="searchBoxClass" placeholder="Şehir Giriniz">
+                            <button type="button" class=" searchBtn">
+                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.6329 27.0317L28.6337 22.085C27.7517 21.21 26.5746 20.72 25.304 20.72C24.891 20.72 24.4792 20.7783 24.0907 20.8833L22.469 19.2733C23.8807 17.29 24.7032 14.8633 24.7032 12.25C24.7032 5.48333 19.1732 0 12.3516 0C5.53005 0 0 5.48333 0 12.25C0 19.0167 5.53005 24.5 12.3516 24.5C14.8343 24.5 17.1513 23.765 19.081 22.505L20.775 24.185C20.6583 24.57 20.6117 24.9783 20.6117 25.3867C20.6117 26.635 21.0923 27.8133 21.9884 28.6883L26.9747 33.635C27.8579 34.51 29.0467 35 30.3056 35C31.5656 35 32.7404 34.51 33.6353 33.635C35.4553 31.815 35.4553 28.8517 33.6329 27.0317V27.0317ZM2.35435 12.25C2.35435 6.77833 6.83439 2.33333 12.3528 2.33333C17.8711 2.33333 22.3512 6.77833 22.3512 12.25C22.3512 17.7217 17.8688 22.1667 12.3528 22.1667C6.83672 22.1667 2.35435 17.7217 2.35435 12.25V12.25ZM31.9623 31.99C31.0453 32.9 29.5507 32.9 28.6337 31.99L23.6462 27.0317C23.1994 26.6 22.9637 26.0167 22.9637 25.3867C22.9637 24.7567 23.211 24.1733 23.6462 23.7417C24.093 23.2983 24.681 23.0533 25.3052 23.0533C25.9399 23.0533 26.5302 23.2983 26.9759 23.7417L31.9634 28.6883C32.8804 29.5983 32.8804 31.08 31.9634 31.99H31.9623Z" fill="#4E5254"/>
+                                    <path d="M14.5 22.8269C14.5 23.2038 14.2014 23.5 13.8214 23.5H13.8079C8.93571 23.4865 5 19.5827 5 14.75C5 9.91731 8.93571 6.01346 13.8079 6H13.8214C14.2014 6 14.5 6.29615 14.5 6.67308C14.5 7.05 14.2014 7.34615 13.8214 7.34615H13.8079C9.69571 7.35962 6.35714 10.6712 6.35714 14.75C6.35714 18.8288 9.69571 22.1404 13.8079 22.1538H13.8214C14.2014 22.1538 14.5 22.45 14.5 22.8269Z" fill="#4E5254"/>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="card-group">
-                        <div class="content">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="city">Istanbul, Tr</div>
+                        <div class="information-output">
+                            <div class="d-flex justify-content-center align-items-center g-4">
+                                <div class="city"></div>
+                                <span class="location-icon">
+                                    <svg width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.18752 1.11075C6.77815 -0.39452 9.96246 -0.36821 12.5288 1.17967C15.0699 2.75907 16.6143 5.57784 16.5999 8.61005C16.5408 11.6224 14.8847 14.4539 12.8147 16.6429C11.6199 17.912 10.2833 19.0342 8.83225 19.9866C8.68281 20.073 8.51911 20.1308 8.34924 20.1573C8.18575 20.1503 8.02652 20.102 7.88594 20.0167C5.67063 18.5857 3.72712 16.759 2.14892 14.6246C0.828332 12.843 0.0780637 10.6905 2.33117e-06 8.45943C-0.00171203 5.42141 1.59689 2.61602 4.18752 1.11075ZM5.68496 9.71686C6.12074 10.7912 7.14935 11.492 8.29051 11.492C9.03811 11.4973 9.75676 11.1979 10.2863 10.6603C10.8159 10.1228 11.1124 9.39181 11.1097 8.63027C11.1137 7.46785 10.4294 6.41763 9.37623 5.96998C8.32308 5.52232 7.10887 5.76553 6.30054 6.58605C5.4922 7.40656 5.24919 8.64253 5.68496 9.71686Z" fill="#2493CB"/>
+                                        <ellipse opacity="0.4" cx="8.29947" cy="22.5286" rx="5.92861" ry="1.18572" fill="#2493CB"/>
+                                    </svg>
+                                </span>
                             </div>
                             <div class="d-flex justify-content-center align-items-center flex-column">
-                                <div class="temp">15°C</div>
+                                <div class="temp"></div>
                             </div>
                             <div class="d-flex justify-content-center align-items-center flex-row gap-3">
-                                <div class="minmax"> 14° / 19° </div>
-                                <div class="desc">Gunesli</div>
+                                <div class="minmax"></div>
+                                <div class="desc"></div>
                             </div>
                         </div>
-                        </div>
+                        <div class="warning-box mb-4"></div>
                     </div>
-                    <div class="card-footer text-center">
-
-                    </div>
+                    <div class="card-footer text-center"></div>
                 </div>
             </div>
         </div>
     </div>
    </div>
-    <script src="script.js"></script>
+    <script src="dist/j/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>
