@@ -11,7 +11,7 @@ body{font-family: sans-serif;color: #000;background: linear-gradient(to bottom r
 .city {font-size: 25px;color: #2493CB;}
 .temp {font-size: 40px;}
 .desc {font-size: 25px; color: #707070;}
-.minmax {font-size: 25px;}
+.minmax {font-size: 25px;color: #c3c3c3;}
 .card-footer {height: 60px;padding-top: 20px;border-top: 1px solid #eee;}
 .app-header {font-size: 25px;color: #898888dd;width: 100%;border-radius: 10px 10px 0px 0px;padding: 10px 20px;border-bottom: 1px solid #eee;margin-bottom: 20px;display: flex;justify-content: flex-start;align-items: end;gap: 10px;}
 .app-header img{width: 50px;height: 50px;background-size: contain;}

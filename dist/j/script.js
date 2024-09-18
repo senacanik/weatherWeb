@@ -14,14 +14,14 @@ const getResult = (cityName) => {
         })
         .then(result => {
             if (result.cod === "404") {
-                showError("Böyle bir şehir bulunamadı.");
+                showError("A city like this has never existed.");
             } else {
                 hideError();
                 displayResult(result);
             }
         })
         .catch(() => {
-            showError("Veri alırken bir hata oluştu.");
+            showError("There was an error receiving data.");
         });
 };
 
@@ -32,9 +32,6 @@ const displayResult = (result) => {
     let temp = document.querySelector(".temp");
     temp.innerText = `${Math.round(result.main.temp)}°C`;
 
-    let desc = document.querySelector(".desc");
-    desc.innerText = result.weather[0].description;
-
     let minmax = document.querySelector(".minmax");
     minmax.innerText = `${Math.round(result.main.temp_min)}°c / ${Math.round(result.main.temp_max)}°c`;
 
@@ -42,11 +39,11 @@ const displayResult = (result) => {
     informationOutput.style.display = "block"; // Veriler geldikten sonra görünür yap
 
     if (result.main.temp > 20) {
-        hotAlert.innerText = "Dikkat! Hava sıcaklığı 20 derecenin üzerinde İnce giyinebilirsin.";
+        hotAlert.innerText = "Attention! It's over 20 degrees. You can dress thinly.";
         hotAlert.style.color = "#af2a2a";
     } else {
         let coldAlert = document.querySelector(".card-footer");
-        coldAlert.innerText = "Dikkat! Hava sıcaklığı 20 derecenin altında. Kalın giyinebilirsin.";
+        coldAlert.innerText = "Attention! The temperature is below 20 degrees Celsius. You can dress warmly.";
         coldAlert.style.color = "#2493cb";
     }
 };
